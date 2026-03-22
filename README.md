@@ -1,58 +1,79 @@
 # DevOps Monitoring Stack (Docker + Prometheus + Grafana)
 
-A simple monitoring stack built on an Ubuntu Server VM using Docker.
+## Overview
 
-## Stack
+This project demonstrates a simple monitoring stack running on an Ubuntu Server using Docker containers.
 
-* Docker
-* Prometheus
-* Grafana
-* Node Exporter
+It collects system metrics and visualizes them through dashboards.
+
+---
 
 ## Architecture
 
 Node Exporter → Prometheus → Grafana
 
-Node Exporter collects system metrics (CPU, RAM, disk).
-Prometheus scrapes those metrics.
-Grafana visualizes them in dashboards.
+* Node Exporter collects system-level metrics (CPU, RAM, disk, network)
+* Prometheus scrapes and stores the metrics
+* Grafana visualizes the data in dashboards
 
-## Project Files
+---
 
-docker-compose.yml
-prometheus.yml
-README.md
+## Technologies Used
 
-## Run the stack
+* Docker
+* Prometheus
+* Grafana
+* Node Exporter
+* Ubuntu Server
 
-```
+---
+
+## Project Structure
+
+* docker-compose.yml
+* prometheus.yml
+* README.md
+
+---
+
+## How to Run
+
+```bash
 docker-compose up -d
 ```
 
-## Access the services
+---
 
-Prometheus
+## Access
+
+Prometheus:
 http://localhost:9090
 
-Grafana
+Grafana:
 http://localhost:3000
 
-## Grafana login
+---
+
+## Grafana Login
 
 username: admin
 password: admin
 
+---
+
 ## Dashboard
 
-Import dashboard from Grafana.com
+Import dashboard:
 
 ID: 1860
 Name: Node Exporter Full
 
-This dashboard shows:
+---
 
-* CPU usage
-* Memory usage
-* Disk usage
-* Network traffic
-* System load
+## What This Project Demonstrates
+
+* Containerized monitoring setup
+* Metrics collection and visualization
+* Basic DevOps workflow using Docker
+* Infrastructure observability fundamentals
+
